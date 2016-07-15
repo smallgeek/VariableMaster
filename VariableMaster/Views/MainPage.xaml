@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+        xmlns:v="clr-namespace:VariableMaster.Views;assembly=VariableMaster"
+        xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
+		prism:ViewModelLocator.AutowireViewModel="True" 
+		x:Class="VariableMaster.Views.MainPage"
+		MasterBehavior="Split">
+
+    <MasterDetailPage.Master>
+        <v:MasterPage />
+	</MasterDetailPage.Master>    
+
+	<MasterDetailPage.Detail>
+        <v:DetailPage />
+	</MasterDetailPage.Detail>
+</MasterDetailPage>
