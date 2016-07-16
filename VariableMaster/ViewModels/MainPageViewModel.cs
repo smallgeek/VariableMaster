@@ -9,16 +9,35 @@ namespace VariableMaster.ViewModels
 {
     public class MainPageViewModel : BindableBase, INavigationAware
     {
-        private int _rate;
-        public int Rate
+        private int _maximumFraction;
+        public int MaximumFraction
         {
-            get { return _rate; }
-            set { SetProperty(ref _rate, value); }
+            get { return _maximumFraction; }
+            set { SetProperty(ref _maximumFraction, value); }
+        }
+
+        private int _minimumFraction;
+        public int MinimumFraction
+        {
+            get { return _minimumFraction; }
+            set { SetProperty(ref _minimumFraction, value); }
+        }
+
+        private int _masterFraction;
+        public int MasterFraction
+        {
+            get { return _masterFraction; }
+            set 
+            { 
+                SetProperty(ref _masterFraction, value); 
+            }
         }
 
         public MainPageViewModel()
         {
-            this.Rate = 40;
+            this.MaximumFraction = 50;
+            this.MinimumFraction = 0;
+            this.MasterFraction = 30;
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)

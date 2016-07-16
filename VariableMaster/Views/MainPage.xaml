@@ -1,12 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MasterDetailPage 
+<c:VariableMasterDetailPage
 		xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+        xmlns:c="clr-namespace:VariableMaster.Controls;assembly=VariableMaster"
         xmlns:v="clr-namespace:VariableMaster.Views;assembly=VariableMaster"
         xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
 		prism:ViewModelLocator.AutowireViewModel="True" 
 		x:Class="VariableMaster.Views.MainPage"
-		MasterBehavior="Split">
+		MasterBehavior="Split"
+        MaximumFraction="{Binding Path=MaximumFraction}"
+		MinimumFraction="{Binding Path=MinimumFraction}"
+		MasterFraction="{Binding Path=MasterFraction}">
 
     <MasterDetailPage.Master>
         <v:MasterPage />
@@ -15,4 +19,4 @@
 	<MasterDetailPage.Detail>
         <v:DetailPage />
 	</MasterDetailPage.Detail>
-</MasterDetailPage>
+</c:VariableMasterDetailPage>

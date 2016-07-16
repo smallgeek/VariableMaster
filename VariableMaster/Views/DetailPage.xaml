@@ -5,7 +5,10 @@
 		x:Class="VariableMaster.Views.DetailPage"
 		Title="Detail">
 
-    <Slider Minimum="0" 
-		    Maximum="50" 
-		    Value="{Binding Rate}" />
+    <Slider Maximum="{Binding Path=MaximumFraction}" 
+            Minimum="{Binding Path=MinimumFraction}" 
+			Value="{Binding Path=MasterFraction, Mode=TwoWay}"
+		    HorizontalOptions="End" 
+			Margin="20"
+		    WidthRequest="200" />
 </ContentPage>
